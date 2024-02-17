@@ -1,4 +1,5 @@
-﻿using AspNet8.Models;
+﻿using AspNet8.DTOs.Comment;
+using AspNet8.Models;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AspNet8.DTOs.Stock
@@ -19,6 +20,6 @@ namespace AspNet8.DTOs.Stock
 
         public long MarketCap { get; set; }
 
-        // List<Comment> removed in DTO
+        public List<CommentDto> Comments { get; set; }
     }
 }
