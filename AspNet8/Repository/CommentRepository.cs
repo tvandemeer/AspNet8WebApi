@@ -23,5 +23,12 @@ namespace AspNet8.Repository
         {
             return await _context.Comments.FindAsync(id);
         }
+
+        public async Task<Comment> CreateAsync(Comment commentModel)
+        {
+            await _context.Comments.AddAsync(commentModel);
+            await _context.SaveChangesAsync();
+            return commentModel;
+        }
     }
 }
