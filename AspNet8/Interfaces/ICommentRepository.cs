@@ -9,5 +9,7 @@ namespace AspNet8.Interfaces
         Task<Comment?> GetByIdAsync(int id);
 
         Task<Comment> CreateAsync(Comment commentModel);
+
+        Task<Comment?> DeleteAsync(int id);
     }
 }
