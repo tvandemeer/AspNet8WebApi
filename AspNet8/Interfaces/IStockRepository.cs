@@ -1,11 +1,12 @@
 ﻿using AspNet8.DTOs.Stock;
+using AspNet8.Helpers;
 using AspNet8.Models;
 
 namespace AspNet8.Interfaces
 {
     public interface IStockRepository
     {
-        Task<List<Stock>> GetAllAsync();
+        Task<List<Stock>> GetAllAsync(QueryObject query);
 
         Task<Stock?> GetByIdAsync(int id);
 
